@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import {Route , NavLink , HashRouter} from "react-router-dom";
+import {Route , HashRouter} from "react-router-dom";
 import Home from "./home";
-import Stuff from "./stuff";
-import Contact from "./contact";
+import Login from "./components/login";
+import Signup from "./components/signup";
+import NavbarDef from "./components/reusables/navbardef";
 import './App.css';
 
 class App extends Component {
@@ -10,16 +11,11 @@ class App extends Component {
     return (
       <HashRouter>
       <div>
-          <h1>Simple SPA</h1>
-          <ul className="header">
-            <li><NavLink exact to="/">Home</NavLink></li>
-            <li><NavLink to="/stuff">Stuff</NavLink></li>
-            <li><NavLink to="/contact">Contact</NavLink></li>
-          </ul>
+          <NavbarDef></NavbarDef>
           <div className="content">
           <Route exact path="/" component={Home}></Route>
-          <Route path="/stuff" component={Stuff}></Route>
-          <Route path="/contact" component={Contact}></Route>
+          <Route path="/login" component={Login}></Route>
+          <Route path="/signup" component={Signup}></Route>
           </div>
         </div>
       </HashRouter>
