@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import {Button,Form} from 'react-bootstrap';
+import {Button,Form,Container} from 'react-bootstrap';
 
 class Signup extends Component {
   constructor()
@@ -33,6 +33,7 @@ class Signup extends Component {
   render() {
     return (
       <div>
+      <Container>
        <Form>
         <Form.Group controlId="formBasicEmail">
             <Form.Label>Email address</Form.Label>
@@ -49,6 +50,7 @@ class Signup extends Component {
             Sign Up
         </Button>
         </Form>
+        </Container>
       </div>
     );
   }

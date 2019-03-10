@@ -1,10 +1,11 @@
 import React, { Component } from "react";
-import {Button,Form} from 'react-bootstrap';
+import {Button,Form,Container} from 'react-bootstrap';
  
 class Login extends Component {
   render() {
     return (
       <div>
+      <Container>
        <Form>
         <Form.Group controlId="formBasicEmail">
             <Form.Label>Email address</Form.Label>
@@ -21,6 +22,7 @@ class Login extends Component {
             Login
         </Button>
         </Form>
+        </Container>
       </div>
     );
   }
