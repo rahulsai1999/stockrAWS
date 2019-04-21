@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Route , HashRouter} from "react-router-dom";
+import {BrowserRouter as Router,Route,Link} from "react-router-dom";
 import Home from "./home";
 import Login from "./components/login";
 import Signup from "./components/signup";
@@ -9,16 +9,16 @@ import './App.css';
 class App extends Component {
   render() {
     return (
-      <HashRouter>
+      <Router>
       <div>
           <NavbarDef></NavbarDef>
           <div className="content">
-          <Route exact path="/" component={Home}></Route>
+          <Route path="/" exact component={Home}></Route>
           <Route path="/login" component={Login}></Route>
           <Route path="/signup" component={Signup}></Route>
           </div>
         </div>
-      </HashRouter>
+      </Router>
     );
   }
 }
