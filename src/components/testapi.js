@@ -10,21 +10,19 @@ class ApiTest extends Component {
       this.state={data:{}};
   }
 
-  onButt=()=>
+  componentDidMount()
   {
     axios.get(url).then((response)=>{
       console.log(response);
       this.setState({data:response.data});
     });
+
   }
 
-  
-  
   render() {
     return (
       <div>
       <Container>
-          <Button onClick={this.onButt}>Click</Button>
           <div>{this.state.data.title}</div>
       </Container>
       </div>
