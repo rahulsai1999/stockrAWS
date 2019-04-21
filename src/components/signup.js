@@ -16,6 +16,7 @@ class Signup extends Component {
   onSignUp()
   {
     const credentials={username:this.state.username,password:this.state.password}
+    console.log(credentials);
     fetch('https://cors-anywhere.herokuapp.com/https://visionapu.herokuapp.com/register',{
       method:'post',
       headers:{'Content-Type':'application/json'},
