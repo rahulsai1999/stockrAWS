@@ -47,7 +47,7 @@ class Signup extends Component {
             <Form.Label>Password</Form.Label>
             <Form.Control type="password" placeholder="Password" onChange={this.onChangePassword.bind(this)} />
         </Form.Group>
-        <Button variant="primary" type="submit" onClick={this.onSignUp}>
+        <Button variant="primary" onClick={this.onSignUp}>
             Sign Up
         </Button>
         </Form>
