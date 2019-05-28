@@ -1,0 +1,10 @@
+sudo: required
+
+services:
+  - docker
+
+before_install:
+  - docker build -t rs83/doc-react -f Dockerfile.dev .
+
+script:
+  - docker run rs83/doc-react npm test -- --coverage
